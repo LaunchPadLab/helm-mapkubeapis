@@ -36,8 +36,8 @@ else
     wget -q "${url}" -O "releases/v${version}.tar.gz"
 fi
 tar xzf "releases/v${version}.tar.gz" -C "releases/v${version}"
-mv "releases/v${version}/mapkubeapis" "bin/mapkubeapis" || \
-    mv "releases/v${version}/mapkubeapis.exe" "bin/mapkubeapis"
+mv "releases/v${version}/bin/mapkubeapis" "bin/mapkubeapis"
+#  || mv "releases/v${version}/mapkubeapis.exe" "bin/mapkubeapis"
 mv "releases/v${version}/plugin.yaml" .
 mv "releases/v${version}/README.md" .
 mv "releases/v${version}/LICENSE" .
