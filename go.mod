@@ -1,4 +1,4 @@
-module github.com/hickeyma/helm-mapkubeapis
+module github.com/LaunchPadLab/helm-mapkubeapis
 
 go 1.13
 
