@@ -11,7 +11,7 @@ echo "Downloading and installing helm-mapkubeapis v${version} ..."
 
 url=""
 if [ "$(uname)" = "Darwin" ]; then
-    url="https://github.com/LaunchPadLab/helm-mapkubeapis/releases/download/v${version}/helm-mapkubeapis_${version}_darwin_amd64.tar.gz"
+    url="https://github.com/LaunchPadLab/helm-mapkubeapis/archive/v${version}.tar.gz"
 elif [ "$(uname)" = "Linux" ] ; then
     if [ "$(uname -m)" = "aarch64" ] || [ "$(uname -m)" = "arm64" ]; then
         url="https://github.com/LaunchPadLab/helm-mapkubeapis/archive/v${version}.tar.gz"
@@ -36,9 +36,9 @@ else
     wget -q "${url}" -O "releases/v${version}.tar.gz"
 fi
 tar xzf "releases/v${version}.tar.gz" -C "releases/v${version}"
-mv "releases/v${version}/bin/mapkubeapis" "bin/mapkubeapis"
+mv "releases/v${version}/helm-mapkubeapis-${version}/bin/mapkubeapis" "bin/mapkubeapis"
 #  || mv "releases/v${version}/mapkubeapis.exe" "bin/mapkubeapis"
-mv "releases/v${version}/plugin.yaml" .
-mv "releases/v${version}/README.md" .
-mv "releases/v${version}/LICENSE" .
-mv "releases/v${version}/config/Map.yaml" "config/Map.yaml"
+mv "releases/v${version}/helm-mapkubeapis-${version}/plugin.yaml" .
+mv "releases/v${version}/helm-mapkubeapis-${version}/README.md" .
+mv "releases/v${version}/helm-mapkubeapis-${version}/LICENSE" .
+mv "releases/v${version}/helm-mapkubeapis-${version}/config/Map.yaml" "config/Map.yaml"
